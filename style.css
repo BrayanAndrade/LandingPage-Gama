@@ -1,0 +1,457 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.back-menu{
+    width: 100%;
+    height:80px;
+    background-color: rgb(26, 26, 26);
+    margin:0;
+    position:fixed;
+    -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.178);
+    -moz-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.226);
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.267);
+    z-index: 9999;
+}
+.back-menu-center{
+    width: 75%;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.logo{
+    width:22%;
+    height:100%;
+    left:0;
+    overflow: hidden;
+    display: flex;
+}
+
+.logo a{
+    margin-top: 25px;
+    font-size:38px;
+    font-weight: bold;
+    color:#00B4CC;
+    line-height:1.2rem
+}
+.logo a span{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing: 0.9rem;
+}
+.logo-link{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800px;
+    text-decoration: none;
+}
+.logo-link img{
+    width:100px;
+}
+.logo-link:nth-child(2){
+    position: relative;
+    top: 32%;
+    left: 5%; 
+}
+.menu-items{
+    background-color: rgb(19, 19, 19);
+    height:50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.178);
+    -moz-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.226);
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.548);
+}
+.menu-items ul{
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+li[class^="menu-item-"] a{
+    margin:12px 22px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+li[class^="menu-item-"] a:hover{
+    color: #00B4CC;
+}
+.menu-item-1 a{
+    color:#00B4CC;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 70%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    transform: translateY(3px);
+    width: 40px;
+    height: 35px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+
+.menu-search{
+    position: absolute;
+    top:20px;
+    right:0;
+    /* background-color: cornflowerblue; */
+    /* margin:7px; */
+}
+
+
+.toggle-menu{
+    transform: translateX(10%) translateY(100%);
+    display: none;
+}
+.toggle-icon{
+    font-size:30px;
+    background-color: #fff;
+    padding:10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.toggle-items{
+    list-style: none;
+    background-color:#351630;
+    width:110px;
+    line-height:47px;
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+    @keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+}
+
+li[class^="toggle-item-"] a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;  
+}
+li[class^="toggle-item-"] a:hover{
+    color: #00B4CC;
+}
+.toggle-item-1 a{
+    color:#00B4CC;
+}
+#toggle-btn{
+    display: none;
+}
+#toggle-btn:checked +ul{
+    display: block;
+     
+}
+
+
+
+.banner{
+    /* background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p1/1372964-fundo-preto-sexta-feira-liquidacao-em-preto-e-vermelho-gr%C3%A1tis-vetor.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; */
+    background: #000000;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.banner .title{
+    color: #fff;
+    text-align: center;
+}
+
+.title h2{
+    font-size: 48px;
+    margin-bottom: -5px;
+}
+
+.title p{
+    font-size: 24px;
+    letter-spacing: 0.8rem;
+    color: #00B4CC;
+}
+
+
+
+
+.destaques{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgb(9,9,9);
+    background: linear-gradient(163deg, rgba(9,9,9,1) 0%, rgba(0,28,32,1) 35%, rgba(0,0,0,1) 82%, rgba(8,8,8,1) 100%);
+}
+
+.card{
+    width: 270px;
+    height: 350px;
+    background: white;
+    margin-right: 20px;
+    margin-top: 20px;  
+    border-radius: 15px;
+    transition: .5s ease;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+.card img{
+    width: 250px;
+    height:250px;
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: 10px;
+
+    object-fit: contain;
+    background-size: contain; 
+}
+
+.card .description{
+    margin-top: -25px; 
+    display: flex;
+}
+.card h2{
+    font-weight: bold;;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.card h4{
+   
+    margin-left: 8px;
+    margin-top:20px;
+    color:rgba(0, 0, 0, 0.493);
+}
+.card p{
+    float: right;
+    margin-left: 110px;
+    color: rgb(206, 0, 0);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.card:hover{
+    box-shadow: rgb(0, 0, 0) 3px 1px 3px 1px;
+    transform: translateY(-30px);
+    border: 3px solid black transparent;
+  border: 3px solid black;
+}
+
+.card-subscribe {
+    background-color: #000000;
+    padding: 30px 50px;
+}
+
+form {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    font-size: 33px;
+    border: none !important;
+}
+
+input {
+    width: 222px;
+    height: 25px;
+    margin-bottom: 9px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+input:hover {
+    cursor: text;
+   
+    color: #000000;
+}
+
+button{
+    width: 470px;
+    height: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+    background:#00B4CC;
+    color: #000000;
+}
+
+button:hover{
+    filter: brightness(0.8);
+}
+
+label{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom:20px;
+}
+
+
+
+
+footer{
+    padding-top: 30px;
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-weight:600;
+  font-size: 17px;
+}
+
+.footer ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.footer li{
+  line-height:2em;
+  cursor: pointer;
+}
+
+
+.row{
+  display: flex;
+  flex-flow:row wrap;
+}
+
+/* .row > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+} */
+footer p{
+    color: #fff;
+    text-align: center;
+    padding-top: 90px;
+}
+
+footer p a{
+    color:#00B4CC;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px){
+  .row > * {
+    flex:1;
+  }
+}
+
+@media (max-width: 600px){
+  .footer {
+    padding: 15px;
+  }
+}
+
+
+
+
+@media screen and (max-width:953px) {
+    .toggle-menu{
+       display: block; 
+    }
+    .back-menu-center{
+        display: none;
+    }
+}
+@media screen and (min-width:953px) {
+    .toggle-menu{
+       display: none; 
+    }
+
+}
